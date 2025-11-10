@@ -2,7 +2,7 @@
 
 ## Project Pitch
 
-Check out [this video]pw(https://drive.google.com/file/d/1CbuMoHe4dtyQ5UrikcLLVCzM11nQikpE/view?usp=drive_link), where I describe my
+Check out [this video](https://drive.google.com/file/d/1CbuMoHe4dtyQ5UrikcLLVCzM11nQikpE/view?usp=drive_link), where I describe my
 project and some challenges I faced while building it.
 
 ### Overview
