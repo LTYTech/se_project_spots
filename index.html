@@ -22,7 +22,7 @@
         <img
           src="./images/spots_logo.svg"
           alt="SPOTS logo"
-          class="header__title"
+          class="header__logo"
         />
       </header>
 
@@ -38,7 +38,7 @@
               <h1 class="profile__name">Bessie Coleman</h1>
               <p class="profile__description">Civil Aviator</p>
             </div>
-            <button class="profile__edit-button">
+            <button type="button" class="profile__edit-button">
               <img
                 src="./images/edit.svg"
                 alt="Edit icon"
@@ -48,7 +48,7 @@
             </button>
           </div>
           <div class="profile__button-container">
-            <button class="profile__add-button">
+            <button type="button" class="profile__add-button">
               <img
                 src="./images/plus.svg"
                 alt="Add icon"
@@ -56,7 +56,6 @@
               />New Post
             </button>
           </div>
-          <span class="profile__border"></span>
         </section>
 
         <section class="cards page__section">
@@ -128,11 +127,12 @@
               </div>
             </li>
           </ul>
-          <span class="cards__border"></span>
         </section>
       </main>
 
-      <footer class="footer">2025 &copy; Spots</footer>
+      <footer class="footer page__section">
+        <p class="footer__copyright">2025 &copy; Spots</p>
+      </footer>
     </div>
   </body>
 </html>
