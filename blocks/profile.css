@@ -19,6 +19,7 @@
   height: 190px;
   border-radius: 8px;
   margin-right: 20px;
+  object-fit: cover;
 }
 
 .profile__user-info {
@@ -71,12 +72,6 @@
   cursor: pointer;
 }
 
-.profile__button-container {
-  align-self: self-end;
-  margin-left: auto;
-  display: flex;
-}
-
 .profile__add-button {
   align-self: self-end;
   margin-left: auto;
@@ -108,6 +103,7 @@
 
 @media screen and (max-width: 658px) {
   .profile {
+    padding-top: 20px;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
@@ -116,8 +112,6 @@
   }
   .profile__avatar {
     margin: 0;
-    height: 190px;
-    width: 190px;
     margin-bottom: 12px;
   }
 
