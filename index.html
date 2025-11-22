@@ -128,6 +128,66 @@
         </section>
       </main>
 
+      <div class="modal modal__is-opened">
+        <div class="modal__container">
+          <div class="modal__row">
+            <h2 class="modal__title">Edit Profile</h2>
+            <button type="button" class="modal__close-btn"></button>
+          </div>
+          <form class="modal__form">
+            <label for="username-input" class="modal__label"
+              >Name
+              <input
+                type="text"
+                id="username-input"
+                class="modal__input"
+                placeholder="Type your name"
+              />
+            </label>
+            <label for="describe-input" class="modal__label"
+              >Description
+              <input
+                type="text"
+                id="describe-input"
+                class="modal__input"
+                placeholder="Describe yourself"
+              />
+            </label>
+            <button type="submit" class="modal__save-btn">Save</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal modal__is-opened">
+        <div class="modal__container">
+          <div class="modal__row">
+            <h2 class="modal__title">New post</h2>
+            <button type="button" class="modal__close-btn"></button>
+          </div>
+          <form class="modal__form">
+            <label for="image-input" class="modal__label"
+              >Image link
+              <input
+                type="url"
+                id="image-input"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+              />
+            </label>
+            <label for="caption-input" class="modal__label"
+              >Caption
+              <input
+                type="text"
+                id="caption-input"
+                class="modal__input"
+                placeholder="Describe yourself"
+              />
+            </label>
+            <button type="submit" class="modal__save-btn">Save</button>
+          </form>
+        </div>
+      </div>
+
       <footer class="footer page__section">
         <p class="footer__copyright">2025 &copy; Spots</p>
       </footer>
