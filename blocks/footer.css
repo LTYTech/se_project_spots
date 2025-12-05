@@ -10,3 +10,9 @@
 .footer__copyright {
   margin: 0;
 }
+
+@media screen and (max-width: 658px) {
+  .content {
+    padding: 0 16px;
+  }
+}
