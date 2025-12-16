@@ -1,3 +1,30 @@
+const initialCards = [
+  {
+    name: "Archer's Bay",
+    link: "https://images.unsplash.com/photo-1674098871778-90120697b694?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Bathsheba Beach",
+    link: "https://images.unsplash.com/photo-1671979846445-a6ee7dc09465?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Ragged Point",
+    link: "https://images.unsplash.com/photo-1676469042178-85b4a6e1b832?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Hunte's Gardens",
+    link: "https://images.unsplash.com/photo-1730660338791-8d63548efc75?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Accra Beach",
+    link: "https://images.unsplash.com/photo-1741606369274-6730b6fb6051?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Dover Gardens",
+    link: "https://images.unsplash.com/photo-1610670885249-d1597521dfea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
+
 const editProfileBtn = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileClose = editProfileModal.querySelector(".modal__close-btn");
@@ -60,3 +87,8 @@ function handleNewPostSubmit(evt) {
 }
 
 newPostFormEl.addEventListener("submit", handleNewPostSubmit);
+
+initialCards.forEach(function (item) {
+  console.log(item.name);
+  console.log(item.link);
+});
