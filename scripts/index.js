@@ -1,5 +1,9 @@
 const initialCards = [
   {
+    name: "Golden Gate Bridge",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+  },
+  {
     name: "Archer's Bay",
     link: "https://images.unsplash.com/photo-1674098871778-90120697b694?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -44,6 +48,38 @@ const newPostCaptionInput = newPostModal.querySelector("#caption-input");
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
+
+const cardTemplate = document
+.querySelector("#card-template")
+.content.querySelector(".card");
+const cardsContainer = document.querySelector(".cards__container");
+
+
+function getCardElement(data) {
+  const cardElement = cardTemplate.cloneNode(true);
+
+  const cardTitle = cardElement.querySelector(".card__title");
+  cardTitle.textContent = data.name;
+
+  const cardImage = cardElement.querySelector(".card__image");
+  cardImage.src =  data.link;
+  cardImage.alt = data.name;
+
+  const cardLikeBtn = cardElement.querySelector(".card__like-button");
+  cardLikeBtn.addEventListener("click", () => {
+    cardLikeBtn.classList.toggle("card__like-button_active")
+  })
+
+
+  const cardDeleteBtn = cardElement.querySelector(".card__delete-button");
+  cardDeleteBtn.addEventListener("click", () => {
+    cardElement.remove();
+    cardElement = null;
+  })
+
+  return cardElement;
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
 }
@@ -51,7 +87,6 @@ function openModal(modal) {
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
 }
-
 
 editProfileBtn.addEventListener("click", function () {
   editProfileUsernameInput.value = profileNameEl.textContent;
@@ -82,14 +117,22 @@ editProfileFormEl.addEventListener("submit", handleEditProfileSubmit);
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
-  console.log(newPostImageLink.value);
-  console.log(newPostCaptionInput.value);
+  
+  const newPostValues = {
+    name: newPostCaptionInput.value,
+    link: newPostImageLink.value
+  };
+
+  const cardEl = getCardElement(newPostValues);
+
+  cardsContainer.prepend(cardEl);
+
   closeModal(newPostModal);
 }
 
 newPostFormEl.addEventListener("submit", handleNewPostSubmit);
 
 initialCards.forEach(function (item) {
-  console.log(item.name);
-  console.log(item.link);
+ const cardEl = getCardElement(item);
+ cardsContainer.append(cardEl);
 });
