@@ -52,6 +52,7 @@ function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
 }
 
+
 editProfileBtn.addEventListener("click", function () {
   editProfileUsernameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
