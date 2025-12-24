@@ -60,17 +60,13 @@
           <ul class="cards__container">
             <template id="card-template">
               <li class="card">
-              <button type class="card__delete-button"></button>
-              <img
-                src="#"
-                alt=""
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title"></h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
+                <button type class="card__delete-button"></button>
+                <img src="#" alt="" class="card__image" />
+                <div class="card__content">
+                  <h2 class="card__title"></h2>
+                  <button type="button" class="card__like-button"></button>
+                </div>
+              </li>
             </template>
           </ul>
         </section>
@@ -81,9 +77,10 @@
           <div class="modal__row">
             <h2 class="modal__title">Edit Profile</h2>
             <button
-            aria-label="Close modal"
-            type="button" 
-            class="modal__close-btn"></button>
+              aria-label="Close modal"
+              type="button"
+              class="modal__close-btn"
+            ></button>
           </div>
           <form class="modal__form" id="edit-profile-form">
             <label for="username-input" class="modal__label"
@@ -114,9 +111,10 @@
           <div class="modal__row">
             <h2 class="modal__title">New post</h2>
             <button
-            aria-label="Close modal" 
-            type="button" 
-            class="modal__close-btn"></button>
+              aria-label="Close modal"
+              type="button"
+              class="modal__close-btn"
+            ></button>
           </div>
           <form class="modal__form" id="new-post-form">
             <label for="image-input" class="modal__label"
@@ -142,23 +140,19 @@
         </div>
       </div>
 
-      <div class="modal modal_is-opened" id="preview-modal">
-         <div class="modal__container_preview">
+      <div class="modal modal_type_preview" id="preview-modal">
+        <div class="modal__container_preview">
           <div class="modal__row_preview">
-            <img 
-            src="https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg" 
-            alt="" 
-            class="modal__image">
+            <img src="#" alt="" class="modal__image" />
             <button
-            aria-label="Close modal" 
-            type="button" 
-            class="modal__close-btn modal_close-btn_type_preview"
+              aria-label="Close modal"
+              type="button"
+              class="modal__close-btn modal_close-btn_type_preview"
             ></button>
           </div>
-            <p class="modal__caption">Golden Gate Bridge</p>
+          <p class="modal__caption">Golden Gate Bridge</p>
         </div>
       </div>
-
 
       <footer class="footer page__section">
         <p class="footer__copyright">2025 &copy; Spots</p>

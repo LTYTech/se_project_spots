@@ -34,7 +34,6 @@
   padding: 32px 50px;
 }
 
-
 .modal__row {
   display: flex;
   justify-content: space-between;
@@ -73,11 +72,12 @@
 }
 
 .modal_close-btn_type_preview:hover {
-  opacity: 0.4; 
+  opacity: 0.4;
 }
 
 .modal__image {
-  background: center transparent no-repeat url(https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg);
+  background: center transparent no-repeat
+    url(https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg);
   border-radius: 8px;
   max-width: 80vw;
   max-height: 80vh;
@@ -174,12 +174,33 @@
   .modal__input {
     font-size: 16px;
   }
+
+  .modal__row_preview {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .modal__image {
+    order: 2;
+    width: 100%;
+  }
+
+  .modal__close-btn {
+    order: 1;
+  }
 }
 
 @media screen and (max-width: 455px) {
+  .modal_type_preview {
+    padding: 0 16px;
+  }
   .modal__container {
     max-width: 300px;
     align-items: center;
+  }
+
+  .modal__container_preview {
+    width: 100%;
   }
 
   .modal__row {
@@ -187,11 +208,25 @@
     width: 100%;
   }
 
+  .modal__row_preview {
+    gap: 8px;
+  }
+
   .modal__form {
     max-width: 276px;
   }
-
   .modal__save-btn {
     max-width: 276px;
+  }
+
+  .modal__caption {
+    font-size: 16px;
+    max-width: 175px;
+  }
+
+  .modal__image {
+    border-radius: 4px;
+    max-width: unset;
+    max-height: auto;
   }
 }

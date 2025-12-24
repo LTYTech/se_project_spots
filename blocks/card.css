@@ -2,6 +2,7 @@
   list-style-type: none;
   max-width: 100%;
   position: relative;
+  cursor: pointer;
 }
 
 .card__image {
@@ -56,7 +57,7 @@
 }
 
 .card__delete-button {
-  background: center transparent no-repeat url(../images/delete.svg); 
+  background: center transparent no-repeat url(../images/delete.svg);
   width: 32px;
   height: 32px;
   border: none;
@@ -70,9 +71,8 @@
 }
 
 .card__delete-button:hover {
-background: transparent no-repeat url(../images/delete+hover.svg)
+  background: transparent no-repeat url(../images/delete+hover.svg);
 }
-
 
 @media screen and (max-width: 455px) {
   .card__image {
