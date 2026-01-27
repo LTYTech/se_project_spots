@@ -60,7 +60,7 @@
           <ul class="cards__container">
             <template id="card-template">
               <li class="card">
-                <button type class="card__delete-button"></button>
+                <button type="button" class="card__delete-button"></button>
                 <img src="#" alt="" class="card__image" />
                 <div class="card__content">
                   <h2 class="card__title"></h2>
@@ -124,6 +124,7 @@
                 id="image-input"
                 class="modal__input"
                 placeholder="Paste a link to the picture"
+                required
               />
             </label>
             <label for="caption-input" class="modal__label"
@@ -133,6 +134,7 @@
                 id="caption-input"
                 class="modal__input"
                 placeholder="Describe yourself"
+                required
               />
             </label>
             <button type="submit" class="modal__save-btn">Save</button>
@@ -141,16 +143,16 @@
       </div>
 
       <div class="modal modal_type_preview" id="preview-modal">
-        <div class="modal__container_preview">
-          <div class="modal__row_preview">
+        <div class="modal__container modal__container_preview">
+          <div class="modal__row modal__row_preview">
             <img src="#" alt="" class="modal__image" />
             <button
               aria-label="Close modal"
               type="button"
-              class="modal__close-btn modal_close-btn_type_preview"
+              class="modal__close-btn modal__close-btn_type_preview"
             ></button>
           </div>
-          <p class="modal__caption">Golden Gate Bridge</p>
+          <p class="modal__caption modal__caption_preview"></p>
         </div>
       </div>
 

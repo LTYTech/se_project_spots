@@ -1,7 +1,7 @@
 const initialCards = [
   {
-    name: "Golden Gate Bridge",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+    name: "Gros Pitons",
+    link: "https://images.unsplash.com/photo-1520115736066-2190b58a4b9e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Archer's Bay",
@@ -76,7 +76,6 @@ function getCardElement(data) {
   const cardDeleteBtn = cardElement.querySelector(".card__delete-button");
   cardDeleteBtn.addEventListener("click", () => {
     cardElement.remove();
-    cardElement = null;
   });
 
   cardImage.addEventListener("click", () => {
@@ -140,7 +139,7 @@ function handleNewPostSubmit(evt) {
   const cardEl = getCardElement(newPostValues);
 
   cardsContainer.prepend(cardEl);
-
+  newPostFormEl.reset();
   closeModal(newPostModal);
 }
 

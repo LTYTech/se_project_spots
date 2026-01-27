@@ -34,13 +34,22 @@
   padding: 32px 50px;
 }
 
+.modal__container_preview {
+  box-sizing:unset;
+  background:unset;
+  border: none;
+  max-width:fit-content;
+  gap: 8px;
+  align-items: center;
+  }
+
+
 .modal__row {
   display: flex;
   justify-content: space-between;
 }
 
 .modal__row_preview {
-  display: flex;
   gap: 12.5px;
 }
 
@@ -56,28 +65,26 @@
   height: 40px;
   background: center transparent no-repeat url(../images/close.svg);
   border: none;
-  opacity: 40%;
+  opacity: 0.4;
   padding: 0;
   cursor: pointer;
   transition: opacity 0.3s ease-in-out;
 }
 
-.modal_close-btn_type_preview {
+.modal__close-btn_type_preview {
   background: center transparent no-repeat url(../images/preview-close.svg);
   opacity: 1;
 }
 
 .modal__close-btn:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
-.modal_close-btn_type_preview:hover {
+.modal__close-btn_type_preview:hover {
   opacity: 0.4;
 }
 
 .modal__image {
-  background: center transparent no-repeat
-    url(https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg);
   border-radius: 8px;
   max-width: 80vw;
   max-height: 80vh;
@@ -96,6 +103,11 @@
   margin-top: 8px;
   max-width: 214px;
   text-align: center;
+}
+
+.modal__caption_preview {
+  margin-top: 0;
+  align-self: flex-start;
 }
 
 .modal__form {
@@ -151,7 +163,7 @@
 }
 
 .modal__save-btn:hover {
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 850px) {
@@ -200,7 +212,8 @@
   }
 
   .modal__container_preview {
-    width: 100%;
+    padding: 0;
+
   }
 
   .modal__row {
@@ -209,6 +222,7 @@
   }
 
   .modal__row_preview {
+    max-width: 288px;
     gap: 8px;
   }
 
@@ -227,6 +241,6 @@
   .modal__image {
     border-radius: 4px;
     max-width: unset;
-    max-height: auto;
+    max-height: none;
   }
 }
