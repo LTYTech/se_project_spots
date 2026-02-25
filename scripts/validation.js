@@ -62,9 +62,9 @@ const toggleButtonState = (inputList, buttonEl, config) => {
   };
 };
 
-  const setEventListeners = (formEl, config) => {
-    const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
-    const buttonEl = formEl.querySelector(config.submitButtonSelector);
+const setEventListeners = (formEl, config) => {
+  const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
+  const buttonEl = formEl.querySelector(config.submitButtonSelector);
 
   toggleButtonState(inputList, buttonEl, config);
 
@@ -74,7 +74,7 @@ const toggleButtonState = (inputList, buttonEl, config) => {
       toggleButtonState(inputList, buttonEl, config);
      });
     });
-  };
+};
 
 const enableValidation = (config) => {
   const formList = document.querySelectorAll(config.formSelector);

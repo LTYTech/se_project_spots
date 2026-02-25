@@ -99,12 +99,31 @@ function getCardElement(data) {
   return cardElement;
 }
 
+const handleEsc = (evt) => {
+  if (evt.key === 'Escape') {
+    const modalIsOpen = document.querySelector('.modal_is-opened');
+    if (modalIsOpen) {
+      closeModal(modalIsOpen);
+    }
+  }
+}
+
+const handleOvrlyClck = (evt) => {
+  if (evt.target.classList.contains('modal')) {
+    closeModal(evt.currentTarget);
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener('keydown', handleEsc);
+  modal.addEventListener('mousedown', handleOvrlyClck);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener('keydown', handleEsc);
+  modal.removeEventListener('mousedown', handleOvrlyClck);
 }
 
 editProfileBtn.addEventListener("click", function () {
@@ -123,11 +142,9 @@ previewModalClose.addEventListener("click", () => {
 });
 
 newPostBtn.addEventListener("click", () => {
-  newPostFormEl.reset();
   const inputList = Array.from(newPostFormEl.querySelectorAll(config.inputSelector));
 
   resetValidation(newPostFormEl, inputList, config);
-  disableBtn(newPostSave, config);
 
   openModal(newPostModal);
 });
@@ -158,7 +175,7 @@ function handleNewPostSubmit(evt) {
 
   newPostFormEl.reset();
   disableBtn(newPostSave, config);
-  
+
   closeModal(newPostModal);
 };
 

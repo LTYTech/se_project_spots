@@ -166,7 +166,7 @@
 }
 
 .modal__save-btn_inactive, .modal__save-btn:disabled {
-  background-color: rgba(33, 33, 33);
+  background-color: rgba(33, 33, 33, 1);
   opacity: 0.5;
   cursor: not-allowed;
 }
