@@ -1,3 +1,12 @@
+const config = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__save-btn",
+  inactiveButtonClass: "modal__save-btn_inactive",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__input-error_active"
+};
+
 const initialCards = [
   {
     name: "Gros Pitons",
@@ -40,6 +49,7 @@ const editProfileDescriptionInput =
 
 const newPostBtn = document.querySelector(".profile__add-button");
 const newPostModal = document.querySelector("#new-post-modal");
+const newPostSave = newPostModal.querySelector(".modal__save-btn");
 const newPostClose = newPostModal.querySelector(".modal__close-btn");
 const newPostFormEl = newPostModal.querySelector("#new-post-form");
 const newPostImageLink = newPostModal.querySelector("#image-input");
@@ -100,6 +110,7 @@ function closeModal(modal) {
 editProfileBtn.addEventListener("click", function () {
   editProfileUsernameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  resetValidation(editProfileFormEl, [editProfileUsernameInput, editProfileDescriptionInput], config);
   openModal(editProfileModal);
 });
 
@@ -112,6 +123,12 @@ previewModalClose.addEventListener("click", () => {
 });
 
 newPostBtn.addEventListener("click", () => {
+  newPostFormEl.reset();
+  const inputList = Array.from(newPostFormEl.querySelectorAll(config.inputSelector));
+
+  resetValidation(newPostFormEl, inputList, config);
+  disableBtn(newPostSave, config);
+
   openModal(newPostModal);
 });
 
@@ -137,11 +154,13 @@ function handleNewPostSubmit(evt) {
   };
 
   const cardEl = getCardElement(newPostValues);
-
   cardsContainer.prepend(cardEl);
+
   newPostFormEl.reset();
+  disableBtn(newPostSave, config);
+  
   closeModal(newPostModal);
-}
+};
 
 newPostFormEl.addEventListener("submit", handleNewPostSubmit);
 
