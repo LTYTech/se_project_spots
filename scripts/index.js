@@ -108,7 +108,7 @@ const handleEsc = (evt) => {
   }
 }
 
-const handleOvrlyClck = (evt) => {
+const handleOverlayClick = (evt) => {
   if (evt.target.classList.contains('modal')) {
     closeModal(evt.currentTarget);
   }
@@ -117,13 +117,13 @@ const handleOvrlyClck = (evt) => {
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
   document.addEventListener('keydown', handleEsc);
-  modal.addEventListener('mousedown', handleOvrlyClck);
+  modal.addEventListener('mousedown', handleOverlayClick);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
   document.removeEventListener('keydown', handleEsc);
-  modal.removeEventListener('mousedown', handleOvrlyClck);
+  modal.removeEventListener('mousedown', handleOverlayClick);
 }
 
 editProfileBtn.addEventListener("click", function () {
