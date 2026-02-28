@@ -2,7 +2,7 @@
 
 ## Project Pitch
 
-Check out [this video](https://drive.google.com/file/d/1mvO8TnetaS8nMhOF0iI3kXS61hyQodhM/view?usp=drive_link), where I describe my
+Check out [this video](https://drive.google.com/file/d/1bplTRCCcvfPHYG7_6zf_RqIxeOvMQUTX/view?usp=sharing), where I describe my
 project and some challenges I faced while building it.
 
 ### Overview
@@ -26,10 +26,13 @@ Created with Figma for design planning, VS Code for development, and DevTools fo
 **Images**
 
 (avatar.jpg)
-(1-photo-by-moritz-feldmann-from-pexels.jpg)
-(2-photo-by-ceiline-from-pexels.jpg)
-(3-photo-by-tubanur-dogan-from-pexels.jpg)
-(4-photo-by-maurice-laschet-from-pexels.jpg) (5-photo-by-van-anh-nguyen-from-pexels.jpg) (6-photo-by-moritz-feldmann-from-pexels.jpg)
+(https://images.unsplash.com/photo-1520115736066-2190b58a4b9e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+(https://images.unsplash.com/photo-1674098871778-90120697b694?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+(https://images.unsplash.com/photo-1671979846445-a6ee7dc09465?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+(https://images.unsplash.com/photo-1676469042178-85b4a6e1b832?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) 
+(https://images.unsplash.com/photo-1730660338791-8d63548efc75?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) 
+(https://images.unsplash.com/photo-1741606369274-6730b6fb6051?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) 
+(https://images.unsplash.com/photo-1610670885249-d1597521dfea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D   )
 
 **GitHub Pages**
 
